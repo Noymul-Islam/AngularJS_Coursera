@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name Calculator</title>
+	<script  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="controller2.js"></script>
+	<style type="text/css">
+		body {font-size: 1.3em;}
+
+	</style>
+</head>
+<body ng-app="NameCalculator">
+	<h1>name calculator</h1>
+	<div ng-controller="NameCalculatorController">
+		<div>
+			Your name:
+			<input type="text" name="" ng-model="name" ng-keyup="displayNumeric();">
+		</div>
+		<div>
+			Total Numeric value of the person's name is: {{totalValue}}
+		</div>
+	</div>
+
+</body>
+</html>
