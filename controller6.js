@@ -3,13 +3,14 @@
 	'user strict';
 	angular.module('MsgApp',[])
 	.controller('MsgController', MsgController)
-    .filter('loves',LoveFilter);
+    .filter('loves',LoveFilter)
+    .filter('truth',TruthFilter);
 	//MsgController.$inject= ['$scope','$filter','lovesFilter'];
 	function MsgController($scope,$filter,lovesFilter){
 		$scope.name= "Shorot";
 		$scope.sayMessage= function ()
 		{
-			debugger;
+			//debugger;
 			var text= "Hi I eat food";
 			var outPut= $filter('uppercase')(text); 
 			return outPut;
@@ -21,7 +22,7 @@
 		}
 	   $scope.sayLoveMessage= function ()
 		{
-			debugger;
+			//debugger;
 			var text= "Hi I eat food";
 			var outPut= lovesFilter(text); 
 			return outPut;
@@ -32,9 +33,19 @@
              input= input || "";
             
              input=input.replace("eat", "eaten");
-             debugger;
-             console.log(input);
+            // debugger;
+            // console.log(input);
              return input;
+		}
+	}
+
+	function TruthFilter(){
+		return function(input, target,replace)
+		{
+			console.log("-"+input);
+			input=input||"";
+			input= input.replace(target,replace);
+			return input;
 		}
 	}
 

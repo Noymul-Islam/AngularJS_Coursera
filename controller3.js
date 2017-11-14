@@ -6,10 +6,11 @@
 		$scope.name="Noymul Islam";
 
 		$scope.upper= function (){
-
 			var upCase= $filter('uppercase');
 			$scope.name= upCase( $scope.name);
  
 		};
 		console.log($injector.annotate(DIController));
 	}
+	ng-model="name"
+{{name}}

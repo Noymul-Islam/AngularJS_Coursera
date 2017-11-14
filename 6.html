@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+<head>
+	<title>Custom Filter</title>
+	<script  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript" src="controller6.js"></script>
+	<style type="text/css">
+		body { font-size: 1.2em; }
+	</style>
+</head>
+<body>
+	<h1>Expressions and Interpolation</h1>
+	<div ng-controller="MsgController">
+		{{name}} has a  message for you: <br>
+        Original:{{sayMessage()}}
+        <br>
+        Changed: {{sayLoveMessage()}}
+        <br>
+        Truth: {{sayLoveMessage()|truth :'food':'foodies'}}
+        <br>
+      <div>
+		<button ng-click="feedShorot()">Feed shorot</button>
+		<br>
+		<img ng-src="images/{{state}}.jpg">
+	 </div>
+		
+
+	</div>
+
+
+</body>
+</html>
