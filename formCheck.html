@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="SimpleFormApp">
+<head>
+	<title>Simple form validation</title>
+	<script type="text/javascript" src="form.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="RegistrationController as reg">
+	<fieldset>
+	<legend>Registration</legend>
+	<form name="regForm" novalidate>
+		<input type="text" name="username" placeholder="pick a use name" ng-model="reg.user.username" required minlength="4" ng-maxlength="10">{{reg.user.username}}
+		<span ng-if="(regForm.username.$error.minlength|| regForm.username.$error.required)&& regForm.username.$touched">
+			Username must be at least 4 characters long
+			
+		</span>
+	    <span ng-if="(regForm.username.$error.maxlength|| regForm.username.$error.required)&& regForm.username.$touched">
+			Username must be at most 10 characters long
+			
+		</span>
+		<br>
+		<input type="email" name="email" placeholder="Emil..." ng-model="reg.user.email" required>
+		<span ng-if="regForm.email.$invaid && regForm.email.$touched">
+			Must be a valid email address: handle@domain format
+		</span>
+		<br>
+
+
+		
+
+		
+	</form>
+   </fieldset>
+
+</body>
+</html>
