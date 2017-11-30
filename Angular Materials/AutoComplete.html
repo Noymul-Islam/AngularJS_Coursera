@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AutoComplete Example</title>
+	<!-- Library files -->
+ <link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      
+      <script type="text/javascript" src="autoComple.js"></script>
+ <style type="text/css">
+ .container1 {
+  display: flex;
+  }	
+ 
+ </style>
+
+
+
+</head>
+<body ng-app="AutoCompleteExample">
+<!--      <div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak>
+  <md-content class="md-padding">
+    <form ng-submit="$event.preventDefault()" name="searchForm">
+      <p>The following example demonstrates floating labels being used as a normal form element.</p>
+      <div layout-gt-xs="row">
+        <md-input-container flex>
+          <label>Name</label>
+          <input type="text"/>
+        </md-input-container>
+        <md-autocomplete required flex
+            md-input-name="autocompleteField"
+            md-input-minlength="2"
+            md-input-maxlength="18"
+            md-no-cache="ctrl.noCache"
+            md-selected-item="ctrl.selectedItem"
+            md-search-text="ctrl.searchText"
+            md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.display"
+            md-require-match
+            md-floating-label="Favorite state">
+          <md-item-template>
+            <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+          </md-item-template>
+          <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+            <div ng-message="required">You <b>must</b> have a favorite state.</div>
+            <div ng-message="md-require-match">Please select an existing state.</div>
+            <div ng-message="minlength">Your entry is not long enough.</div>
+            <div ng-message="maxlength">Your entry is too long.</div>
+          </div>
+        </md-autocomplete >
+     <!--    <div flex>
+        	 <md-datepicker ng-model="birthday"></md-datepicker>
+        </div> -->
+
+    
+    <!--       <md-datepicker ng-model="birthday" flex></md-datepicker> -->
+ <!--       
+      </div>
+  
+      <md-button  class="md-warn" style="margin-left: 48%; margin-right:48%; width: 4%;">Submit</md-button>
+    
+    </form> --> 
+<!-- 
+<md-card>
+  <md-card-header>
+    <md-card-avatar>
+      <img class="md-user-avatar" src="avatar.png">
+    </md-card-avatar>
+    <md-card-header-text>
+      <span class="md-title">Title</span>
+      <span class="md-subhead">Sub header</span>
+    </md-card-header-text>
+  </md-card-header>
+  <img ng-src="card-image.png" class="md-card-image" alt="image caption">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">Card headline</span>
+      <span class="md-subhead">Card subheader</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-actions layout="row" layout-align="start center">
+    <md-button>Action 1</md-button>
+    <md-button>Action 2</md-button>
+    <md-card-icon-actions>
+      <md-button class="md-icon-button" aria-label="icon">
+        <md-icon md-svg-icon="icon"></md-icon>
+      </md-button>
+    </md-card-icon-actions>
+  </md-card-actions>
+  <md-card-content>
+    <p>
+     Card content
+    </p>
+  </md-card-content>
+</md-card> -->
+
+
+
+
+
+  </md-content>
+</div>
+
+</body>
+</html>
